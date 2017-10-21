@@ -201,7 +201,10 @@ void loop() {
 
       motor_status = temp_motor_status; // Restore motors
 
-    } 
+    }
+       else if (strcmp(buf, "GH") == 0) { // Go Home
+      return_home();
+    }
     else if (strcmp(buf, "GO") == 0) {  // Do the current job
       current_mode = runningMode;
     }
