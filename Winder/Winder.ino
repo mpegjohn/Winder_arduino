@@ -161,6 +161,9 @@ void loop() {
         else if (strcmp(identifier, "PL") == 0) { // Pause after layer
           stop_after_layer = 1;
         }
+        else if (strcmp(identifier, "SR") == 0) { //Shuttle Reverse
+          direction = 1;
+        }
       } 
       while (strcmp(identifier, "DN") != 0);
       current_mode = parameterMode;
