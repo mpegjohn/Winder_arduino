@@ -97,6 +97,7 @@ void loop() {
           num_taps = 0;
           motor_status = 0x03;  // both motors on
           direction = 0;
+	  spool_dir = 1;
           running = 0;
           at_tap = 0;
           stop_after_layer = 0;
@@ -163,6 +164,9 @@ void loop() {
         }
         else if (strcmp(identifier, "SR") == 0) { //Shuttle Reverse
           direction = 1;
+        }
+        else if (strcmp(identifier, "PR") == 0) { //Spool Reverse
+          spool_dir = -1;
         }
       } 
       while (strcmp(identifier, "DN") != 0);

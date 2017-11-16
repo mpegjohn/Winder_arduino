@@ -60,7 +60,9 @@ layer_taps;
 uint8_t motor_status = 0x03; // both motors on
 
 uint8_t direction = 0;
-volatile uint8_t running = 0; // The flag that controlls the motor updates
+int spool_dir = 1;
+
+volatile uint9_t running = 0; // The flag that controlls the motor updates
 volatile uint8_t  go_home = 0; // The flag that says if we are in go home mode
 uint8_t at_tap = 0; // 0 not at a tap, 1 = at a tap, waiting for the go again
 uint8_t end_of_layer = 0;
