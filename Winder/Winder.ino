@@ -379,6 +379,8 @@ void do_a_layer(float num_turns) {
   spoolSpeed = calculateSpoolSpeed();
   spoolSteps = calculateSpoolSteps(num_turns);
 
+  spoolSteps = spoolSteps * spool_dir;
+
   shuttleSpeed = calculateShuttleSpeed(spoolSpeed, wire_size.value);
   shuttleSteps = calculateShuttleSteps(wire_size.value, num_turns);
 
